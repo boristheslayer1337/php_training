@@ -94,4 +94,4 @@ $article->setAuthorname($a);
 echo $article->getArticlename() . '<br>';
 echo $article->getAuthorname() . '<br>';
 
-echo 'Hello world!';
+echo 'Hello galaxy!';
