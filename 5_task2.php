@@ -93,3 +93,5 @@ $article->setArticlename('Classes and objects');
 $article->setAuthorname($a);
 echo $article->getArticlename() . '<br>';
 echo $article->getAuthorname() . '<br>';
+
+echo 'Hello world!';
