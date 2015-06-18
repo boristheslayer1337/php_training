@@ -18,3 +18,5 @@ echo $a+$b;
 $now = date('U');
 
 echo $now;
+
+echo 'hello world'!
