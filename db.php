@@ -35,14 +35,20 @@ switch($request->server->get('PATH_INFO')){
 		}
 		break;
 	case '/admin/post':
-			if ($request->query->getInt('id')) {
+		if ($request->query->getInt('id')) {
 			require_once 'admin-post.php';
 		} else {
 			require_once 'admin-posts.php';
 		}
-
-	case '/admin/post/delete'
-		//@TODO execute DELETE query....
+		break;
+	case '/admin/post/new':
+		require_once 'admin-post.php';
+		break;
+	case '/admin/post/delete':
+		$conn->delete('posts', [
+			'id' => $request->query->getInt('id'),
+		]);
+		header('Location:' . $request->server->get('SCRIPT_NAME') . '/admin/post' );
 		break;
 	default:
 		header('HTTP/1.0 404 Not Found');
